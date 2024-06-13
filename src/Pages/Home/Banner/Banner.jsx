@@ -23,6 +23,8 @@ const Banner = ({ alt }) => {
     { id: 3, src: "https://wpbingosite.com/wordpress/bootin/wp-content/uploads/2019/04/banner3-5.jpg", title: "Design Books 2024", info: "50% OFF" }
   ];
 
+  
+
   return (
     <div className="banner">
       {images.map((image) => (
