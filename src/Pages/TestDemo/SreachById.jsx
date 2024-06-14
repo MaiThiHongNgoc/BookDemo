@@ -28,7 +28,7 @@ const SreachById = () => {
                         required
                     />
                 </label>
-                <button type="submit">Search</button> {/* Nút "Delete" để gửi form */}
+                <button type="submit">Search</button> 
             </form>
             <p>{message}</p>
             <div>
