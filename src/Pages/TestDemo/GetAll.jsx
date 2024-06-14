@@ -27,7 +27,7 @@ const FetchAllData = () => {
                 <p>Loading...</p>
             ) : (
                 <div>
-                    <pre>{JSON.stringify(data, null, 2)}</pre>
+                    <pre>{JSON.stringify(data.content, null , 2)}</pre>
                 </div>
             )}
         </div>

@@ -16,6 +16,7 @@ import FetchAllData from "./Pages/TestDemo/GetAll";
 import DeleteLibrary from "./Pages/TestDemo/Delete";
 import CreateLibrary from "./Pages/TestDemo/Post";
 import UpdateLibrary from "./Pages/TestDemo/Update";
+import SreachById from "./Pages/TestDemo/SreachById";
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path="/delete" element ={<DeleteLibrary/>} />
           <Route path="/Post" element ={<CreateLibrary/>} />
           <Route path="/update" element ={<UpdateLibrary/>} />
+          <Route path="/search" element = {<SreachById />} />
 
         </Routes>
         <Footer/>

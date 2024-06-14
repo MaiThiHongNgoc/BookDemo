@@ -8,6 +8,7 @@ const Footer = () => {
       <div><Link to = "/post">Post</Link></div>
       <div><Link to = "/update">Update</Link></div>
       <div><Link to = "/delete">Delete</Link></div>
+      <div><Link to = "/search">Search</Link></div>
     </div>
   )
 }
