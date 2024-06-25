@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/paymentmethods/v1/")
+@CrossOrigin(origins = "http://localhost:3000")
 public class PayMentMethodsController {
     @Autowired
     private PayMentMethodsService payMentMethodsService;
