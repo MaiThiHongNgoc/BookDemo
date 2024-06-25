@@ -9,6 +9,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 
 @RestController
 @RequestMapping("/api/products/v1/")
@@ -18,8 +20,8 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping
-    public ResponseEntity<Page<Products>> getAllProducts(Pageable pageable) {
-        return productService.getAllProducts(pageable);
+    public ResponseEntity<Page<Products>> getAllProducts(@RequestParam("p") Optional<Integer> p) {
+        return productService.getAllProducts(p);
     }
 
     @GetMapping("/{id}")

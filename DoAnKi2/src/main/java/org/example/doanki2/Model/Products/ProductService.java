@@ -5,6 +5,7 @@ import org.example.doanki2.Entity.Products;
 import org.example.doanki2.Model.Categoris.CategoriesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -19,8 +20,9 @@ public class ProductService {
     @Autowired
     private CategoriesRepository categoriesRepository;
 
-    public ResponseEntity<Page<Products>> getAllProducts(Pageable pageable){
-       return ResponseEntity.ok(productRepository.findAll(pageable));
+    public ResponseEntity<Page<Products>> getAllProducts(Optional<Integer> p){
+        Pageable pageables = PageRequest.of(p.orElse(null), 10);
+       return ResponseEntity.ok(productRepository.findAll(pageables));
     }
 
     public ResponseEntity<Products> getProductById(int id){
